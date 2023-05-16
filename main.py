@@ -1,4 +1,5 @@
 from Connect4 import *
+from TicTacToe import *
 from algorithms import *
 
 def visualize(state):
@@ -10,10 +11,12 @@ def visualize(state):
 
 
 while(True):
-    print("Enter the game that you want to play (1 for Connect4 otherwise exit)")
+    print("Enter the game that you want to play (1 for Connect4 and 2 for Tic Tac Toe otherwise exit)")
     game_type = input()
     if game_type =='1' :
         game = Connect4()
+    elif game_type =='2':
+        game = TicTacToe()
     else:
         break
     
