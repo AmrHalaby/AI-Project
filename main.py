@@ -20,15 +20,17 @@ while(True):
     print("Enter the Agent type that you want (1 for MiniMax otherwise AlphaBeta)")
     Agent_type = input()
     
+    print("Enter the max depth that you want (please entre an integar number pleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeese)")
+    d = int(input())
     
     state = game.init_state
     while(not game.terminal_test(state)):
         print("Agent Move")
         
         if Agent_type == '1' :
-            action = minimax(game, state)
+            action = H_minimax(game, state,d)
         else:
-            action = alpha_beta(game, state)
+            action = H_alpha_beta(game, state,d)
             
         state = game.result(state, action)
         
